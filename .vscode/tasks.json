@@ -1,0 +1,23 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build with g++",
+            "type": "shell",
+            "command": "C:/msys64/mingw64/bin/g++.exe -Wall -Wextra -g \"${file}\" -o \"${fileDirname}/output/${fileBasenameNoExtension}.exe\" $(pkg-config --cflags --libs gstreamer-1.0 gstreamer-app-1.0 gstreamer-rtsp-server-1.0)",
+            "options": {
+                "cwd": "${fileDirname}",
+                "shell": {
+                    "executable": "C:/msys64/usr/bin/bash.exe",
+                    "args": [
+                        "-c"
+                    ]
+                }
+            },
+            "group": "build",
+            "problemMatcher": [
+                "$gcc"
+            ]
+        }
+    ]
+}
